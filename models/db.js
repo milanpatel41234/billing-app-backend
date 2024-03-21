@@ -16,10 +16,26 @@ const sequelize = new Sequelize(
   }
 );
 
+
 const db = {};
+
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
+// Add associations to the models
 db.user = require("./users")(sequelize, Sequelize);
+db.company = require("./company")(sequelize, Sequelize);
+db.brand = require("./brand")(sequelize, Sequelize);
+db.category = require("./category")(sequelize);
+db.tax = require("./tax")(sequelize);
+db.product = require("./product")(sequelize);
+db.contact = require("./contact")(sequelize);
+db.lead = require("./lead")(sequelize);
+db.bank = require("./bank")(sequelize);
+db.sales_inv = require("./sales_inv")(sequelize);
+db.purchase_inv = require("./purchase_inv")(sequelize);
+db.quotation = require("./quotation")(sequelize);
+db.payment = require("./payment")(sequelize);
+
 
 module.exports = db;

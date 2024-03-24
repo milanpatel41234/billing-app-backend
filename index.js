@@ -5,7 +5,7 @@ dotenv.config();
 const bodyParser = require("body-parser");
 
  const db = require("./models/db");
-//  const userRouter = require("./routes/userRoute");
+ const userRouter = require("./routes/userRoute");
 // const companyRoute = require("./routes/companyRoute");
 // const brandRoute = require("./routes/brandRoute");
 // const categoryRoute = require("./routes/categoryRoute");
@@ -52,7 +52,7 @@ app.use("/welcome", (req, res)=>{return res.send('Welcome')});
 
 
 
-//  app.use("/user", userRouter);
+ app.use("/user", userRouter);
 // app.use("/company", companyRoute);
 // app.use("/brand", brandRoute);
 // app.use("/category", categoryRoute);
@@ -84,5 +84,5 @@ app.use("/welcome", (req, res)=>{return res.send('Welcome')});
 //     logStream.write(`Unhandled Rejection at: Promise ${p}, reason: ${reason}\n`);
 // });
 
-db.sequelize.sync();
+// db.sequelize.sync();
 app.listen(5000);

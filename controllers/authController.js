@@ -17,7 +17,7 @@ exports.login = async (req, res) => {
   }
   try {
     const usr = await user.findOne({ where: { email } });
-
+      
     if (usr) {
       const result = await bcrypt.compare(password, usr.password);
       if (result) {

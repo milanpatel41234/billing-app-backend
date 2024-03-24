@@ -53,19 +53,19 @@ db.company.hasMany(db.payment);
 
 
  app.use("/user", userRouter);
-app.use("/company", companyRoute);
-app.use("/brand", brandRoute);
-app.use("/category", categoryRoute);
-app.use("/tax", taxRoute);
-app.use('/product', productRoute);
-app.use('/contact', contactRoute);
-app.use('/lead', leadRoute);
-app.use('/bank', bankRoute);
-app.use('/sales_inv', seles_invRoute);
-app.use('/purchase_inv', purchase_invRoute);
-app.use('/quotation', quotationRoute);
-app.use('/note', noteRoute);
-app.use('/payment', paymentRoute);
+// app.use("/company", companyRoute);
+// app.use("/brand", brandRoute);
+// app.use("/category", categoryRoute);
+// app.use("/tax", taxRoute);
+// app.use('/product', productRoute);
+// app.use('/contact', contactRoute);
+// app.use('/lead', leadRoute);
+// app.use('/bank', bankRoute);
+// app.use('/sales_inv', seles_invRoute);
+// app.use('/purchase_inv', purchase_invRoute);
+// app.use('/quotation', quotationRoute);
+// app.use('/note', noteRoute);
+// app.use('/payment', paymentRoute);
 
 // const fs = require('fs');
 
@@ -84,5 +84,5 @@ app.use('/payment', paymentRoute);
 //     logStream.write(`Unhandled Rejection at: Promise ${p}, reason: ${reason}\n`);
 // });
 
-db.sequelize.sync({force:true});
+db.sequelize.sync();
 app.listen(5000);

@@ -67,22 +67,22 @@ app.use('/quotation', quotationRoute);
 app.use('/note', noteRoute);
 app.use('/payment', paymentRoute);
 
-const fs = require('fs');
+// const fs = require('fs');
 
-// Create a writable stream
-const logStream = fs.createWriteStream('errorLogs.txt', { flags: 'a' });
+// // Create a writable stream
+// const logStream = fs.createWriteStream('errorLogs.txt', { flags: 'a' });
 
-// Function to handle uncaught exceptions
-process.on('uncaughtException', function(err) {
-    // Write the error to the log file
-    logStream.write(`Caught exception: ${err}\n`);
-});
+// // Function to handle uncaught exceptions
+// process.on('uncaughtException', function(err) {
+//     // Write the error to the log file
+//     logStream.write(`Caught exception: ${err}\n`);
+// });
 
-// Function to handle unhandled promise rejections
-process.on('unhandledRejection', function(reason, p) {
-    // Write the rejection reason to the log file
-    logStream.write(`Unhandled Rejection at: Promise ${p}, reason: ${reason}\n`);
-});
+// // Function to handle unhandled promise rejections
+// process.on('unhandledRejection', function(reason, p) {
+//     // Write the rejection reason to the log file
+//     logStream.write(`Unhandled Rejection at: Promise ${p}, reason: ${reason}\n`);
+// });
 
-db.sequelize.sync();
+db.sequelize.sync({force:true});
 app.listen(5000);

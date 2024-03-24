@@ -57,22 +57,22 @@ module.exports = (sequelize) => {
         type:DataTypes.STRING(45),
     },
     paid_date:{
-        type:DataTypes.DATE,
+        type:DataTypes.STRING(45),
     },
     balance:{
         type:DataTypes.INTEGER,
     },
     all_products:{
-        type:DataTypes.JSON,
+        type:DataTypes.TEXT,
     },
     other_charges:{
-        type:DataTypes.JSON,
+        type:DataTypes.TEXT,
     },
     other_info:{
-        type:DataTypes.JSON,
+        type:DataTypes.TEXT,
     },
     all_checks:{
-     type:DataTypes.JSON,
+     type:DataTypes.TEXT,
     }
   });
 

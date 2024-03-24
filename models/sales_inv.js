@@ -63,16 +63,16 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
     },
     all_products: {
-      type: DataTypes.JSON,
+      type: DataTypes.TEXT,
     },
     other_charges: {
-      type: DataTypes.JSON,
+      type: DataTypes.TEXT,
     },
     other_info: {
-      type: DataTypes.JSON,
+      type: DataTypes.TEXT,
     },
     all_checks: {
-      type: DataTypes.JSON,
+      type: DataTypes.TEXT,
     },
   });
 

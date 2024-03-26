@@ -84,5 +84,5 @@ app.use('/payment', paymentRoute);
 //     logStream.write(`Unhandled Rejection at: Promise ${p}, reason: ${reason}\n`);
 // });
 
-db.sequelize.sync({force:true});
+db.sequelize.sync();
 app.listen(5000);
